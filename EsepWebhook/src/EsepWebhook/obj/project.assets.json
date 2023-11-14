@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Amazon.Lambda.Core/2.1.0": {
+      "Amazon.Lambda.Core/2.2.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/Amazon.Lambda.Core.dll": {
@@ -15,10 +15,10 @@
           }
         }
       },
-      "Amazon.Lambda.Serialization.SystemTextJson/2.3.1": {
+      "Amazon.Lambda.Serialization.SystemTextJson/2.4.0": {
         "type": "package",
         "dependencies": {
-          "Amazon.Lambda.Core": "2.1.0"
+          "Amazon.Lambda.Core": "2.2.0"
         },
         "compile": {
           "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.dll": {
@@ -30,16 +30,34 @@
             "related": ".xml"
           }
         }
-      },
-      "Newtonsoft.Json/13.0.3": {
+      }
+    },
+    "net6.0/linux-x64": {
+      "Amazon.Lambda.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Amazon.Lambda.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Amazon.Lambda.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Amazon.Lambda.Serialization.SystemTextJson/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Amazon.Lambda.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.dll": {
             "related": ".xml"
           }
         }
@@ -47,74 +65,47 @@
     }
   },
   "libraries": {
-    "Amazon.Lambda.Core/2.1.0": {
-      "sha512": "ok06UhfBZw6j6+PhiJR9C0EOMuJvnq8rMCHVkaFmPFrlI/q447ukwGZQKaAKqodV+MNTfpb/iPxjgUPVbSlVVw==",
+    "Amazon.Lambda.Core/2.2.0": {
+      "sha512": "DHqKeD1CYocP0t1dJC/NaXfu+5k6AoqnQ1Hlu/J2mXpLpCyeJfY+tIqT5fpruDarUlU0NtdIH8zSkCjeinyb1A==",
       "type": "package",
-      "path": "amazon.lambda.core/2.1.0",
+      "path": "amazon.lambda.core/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "amazon.lambda.core.2.1.0.nupkg.sha512",
+        "amazon.lambda.core.2.2.0.nupkg.sha512",
         "amazon.lambda.core.nuspec",
         "lib/net6.0/Amazon.Lambda.Core.dll",
         "lib/net6.0/Amazon.Lambda.Core.xml",
+        "lib/net8.0/Amazon.Lambda.Core.dll",
+        "lib/net8.0/Amazon.Lambda.Core.xml",
         "lib/netstandard2.0/Amazon.Lambda.Core.dll",
         "lib/netstandard2.0/Amazon.Lambda.Core.xml"
       ]
     },
-    "Amazon.Lambda.Serialization.SystemTextJson/2.3.1": {
-      "sha512": "7dGGgikMlEz72rGqeDwQEIxq+O8RDEdR4GH2S7hfZ8uzv5lyWVDuP2urV6MyD6APJ2WVHRwJlV74bB+XJncQpw==",
+    "Amazon.Lambda.Serialization.SystemTextJson/2.4.0": {
+      "sha512": "VwHKBvAD3ivAoAYjRNy/LsZaoFayKAWhVYOTYur5UQZzxYCC6itTwBH5skt3l8FCIjOAGnZljHNnayu17Y53jw==",
       "type": "package",
-      "path": "amazon.lambda.serialization.systemtextjson/2.3.1",
+      "path": "amazon.lambda.serialization.systemtextjson/2.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "amazon.lambda.serialization.systemtextjson.2.3.1.nupkg.sha512",
+        "amazon.lambda.serialization.systemtextjson.2.4.0.nupkg.sha512",
         "amazon.lambda.serialization.systemtextjson.nuspec",
         "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.dll",
         "lib/net6.0/Amazon.Lambda.Serialization.SystemTextJson.xml",
+        "lib/net8.0/Amazon.Lambda.Serialization.SystemTextJson.dll",
+        "lib/net8.0/Amazon.Lambda.Serialization.SystemTextJson.xml",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.dll",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.xml"
-      ]
-    },
-    "Newtonsoft.Json/13.0.3": {
-      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
-      "type": "package",
-      "path": "newtonsoft.json/13.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "README.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/net6.0/Newtonsoft.Json.dll",
-        "lib/net6.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Amazon.Lambda.Core >= 2.1.0",
-      "Amazon.Lambda.Serialization.SystemTextJson >= 2.3.1",
-      "Newtonsoft.Json >= 13.0.3"
+      "Amazon.Lambda.Core >= 2.2.0",
+      "Amazon.Lambda.Serialization.SystemTextJson >= 2.4.0"
     ]
   },
   "packageFolders": {
@@ -158,15 +149,11 @@
         "dependencies": {
           "Amazon.Lambda.Core": {
             "target": "Package",
-            "version": "[2.1.0, )"
+            "version": "[2.2.0, )"
           },
           "Amazon.Lambda.Serialization.SystemTextJson": {
             "target": "Package",
-            "version": "[2.3.1, )"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.3, )"
+            "version": "[2.4.0, )"
           }
         },
         "imports": [
@@ -182,7 +169,15 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
             "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
             "version": "[6.0.14, 6.0.14]"
           }
         ],
@@ -192,6 +187,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "linux-x64": {
+        "#import": []
       }
     }
   }
